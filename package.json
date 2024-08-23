@@ -1,0 +1,21 @@
+{
+  "name": "@galacean/engine-root",
+  "version": "1.0.0",
+  "packageManager": "pnpm@8.6.2",
+  "private": true,
+  "scripts": {
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.16",
+    "@types/webxr": "latest",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6"
+  },
+  "lint-staged": {
+    "*.{ts}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "repository": "git@github.com:galacean/runtime.git"
+}

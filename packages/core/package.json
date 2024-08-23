@@ -1,0 +1,20 @@
+{
+  "name": "@oasishub/core",
+  "version": "0.0.1",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "license": "MIT",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "types/index.d.ts",
+  "debug": "src/index.ts",
+  "scripts": {
+    "b:types": "tsc"
+  },
+  "files": [
+    "dist/**/*",
+    "types/**/*"
+  ]
+}
