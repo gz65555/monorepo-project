@@ -1,10 +1,10 @@
 {
   "name": "@galacean/engine-root",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "packageManager": "pnpm@8.6.2",
   "private": true,
   "scripts": {
-    "release": "bumpp -r --no-push --no-commit"
+    "release": "bumpp"
   },
   "devDependencies": {
     "@types/node": "^18.7.16",
