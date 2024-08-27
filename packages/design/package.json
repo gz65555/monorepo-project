@@ -1,5 +1,5 @@
 {
-  "name": "@oasis-hub/design",
+  "name": "@oasishub/design",
   "version": "0.0.8",
   "publishConfig": {
     "access": "public",
