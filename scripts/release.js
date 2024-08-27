@@ -17,7 +17,7 @@ if (result.length > 0) {
     execSync(`pnpm publish -r --tag ${tag} --no-git-checks`, { cwd: process.cwd() });
   } catch (error) {
     console.error("执行命令时出错:", error.message);
-    throw `错误输出: error.output[1].toString()`
+    throw `错误输出: ${error.output[1].toString()}`
   }
 } else {
   console.log(`no match for the ${branch} branch, stop release`);
