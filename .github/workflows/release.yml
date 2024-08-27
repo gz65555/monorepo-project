@@ -27,17 +27,14 @@ jobs:
               },
               {
                 name: '[0-9].[0-9]',
-                prerelease: false,
                 channel: 'latest'
               },
               {
                 name: 'dev/*',
-                prerelease: true,
                 channel: 'beta'
               },
               {
                 name: 'experimental/*',
-                prerelease: true,
                 channel: 'experimental'
               }
             ]
