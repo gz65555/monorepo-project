@@ -26,14 +26,6 @@ jobs:
                 channel: 'latest'
               },
               {
-                name: '[0-9].[0-9]',
-                channel: 'latest'
-              },
-              {
-                name: 'dev/*',
-                channel: 'beta'
-              },
-              {
                 name: 'experimental/*',
                 channel: 'experimental'
               }
