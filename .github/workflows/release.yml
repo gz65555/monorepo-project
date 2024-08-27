@@ -30,7 +30,7 @@ jobs:
           cache: pnpm
 
       - name: Release current monorepo
-        uses: gz65555/publish@v0.0.3
+        uses: gz65555/publish@v0.0.4
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           NPM_CONFIG_PROVENANCE: true
