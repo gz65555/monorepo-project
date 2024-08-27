@@ -3,6 +3,9 @@
 name: Release
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -30,7 +33,7 @@ jobs:
           cache: pnpm
 
       - name: Release current monorepo
-        uses: gz65555/publish@v0.0.4
+        uses: gz65555/publish@v0.0.5
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           NPM_CONFIG_PROVENANCE: true
