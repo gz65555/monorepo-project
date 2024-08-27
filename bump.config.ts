@@ -3,7 +3,7 @@ import { defineConfig } from "bumpp";
 
 export default defineConfig({
   recursive: true,
-  push: false,
-  commit: false,
-  tag: false
+  push: true,
+  commit: true,
+  tag: true
 });
