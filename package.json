@@ -4,7 +4,8 @@
   "packageManager": "pnpm@8.6.2",
   "private": true,
   "scripts": {
-    "release": "bumpp -r"
+    "bump": "bumpp -r",
+    "release": "node scripts/release.js"
   },
   "devDependencies": {
     "@types/node": "^18.7.16",

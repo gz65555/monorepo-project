@@ -3,34 +3,33 @@
 name: Release
 
 on:
-  push:
-    tags:
-      - 'v*'
   workflow_dispatch:
 
 jobs:
-  message:
+  release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v4
+      - uses: actions/checkout@v3
         with:
-          semantic_version: 16
-          # you can set branches for semantic-release above v16.
-          branches: |
-            [
-              {
-                name: 'main',
-                channel: 'latest'
-              },
-              {
-                name: 'experimental/*',
-                channel: 'experimental'
-              }
-            ]
+          fetch-depth: 0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: true
+
+      # after pnpm
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+          registry-url: https://registry.npmjs.org/
+          cache: pnpm
+
+      - run: npm publish --access public
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_CONFIG_PROVENANCE: true
