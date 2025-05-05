@@ -1,6 +1,6 @@
 {
   "name": "@oasishub/core",
-  "version": "0.0.9",
+  "version": "2.0.0",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
